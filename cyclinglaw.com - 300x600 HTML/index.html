@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycling Law Ad</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: white;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .ad-container {
+            width: 300px;
+            height: 600px;
+            background-color: black;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .ad-container a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+            visibility: hidden;
+        }
+        
+        .active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .logo {
+            width: 80px;
+        }
+        
+        .text {
+            font-size: 20px;
+            margin: 10px 0;
+            padding: 0 10px;
+        }
+        
+        .video {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
+        }
+        
+        .small-text {
+            font-size: 10px;
+            margin-top: 5px;
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            text-align: center;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad-container">
+        <a href="https://cyclinglaw.com" target="_blank">
+            <div class="slide active">
+                <div class="text">
+                    <b>NO</b><i> TWO CYCLISTS</i> <br /><b>ARE</b>
+                    <span style="color: #f7cc52"><b>THE SAME</b></span>
+                </div>
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <video class="video" autoplay plasyinline muted loop preload="auto">
+            <source
+              src="
+              https://www.dropbox.com/scl/fi/kudsb84wabzlwomke4b7m/1.mp4?rlkey=ccz6odphpoacumdj6panuqg1b&st=01ymzeah&raw=1"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <video class="video" autoplay plasyinline muted loop preload="auto">
+            <source
+              src="https://www.dropbox.com/scl/fi/mopry053p7fslftzsoduk/2.mp4?rlkey=7ztzxg2wyo2w0u522nz8tjh5c&st=evzk5yxn&raw=1"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <div class="text">
+                    <b>FIND A</b><span style="color: #f7cc52"><b> LAW FIRM</b></span>
+                    <b>THAT</b>
+                    <br /><i> WILL TREAT </i>
+                    <b> YOU</b>
+                    <span style="color: #f7cc52"><b>LIKE YOU</b></span>
+                </div>
+                <div class="small-text">lawyers4cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <video class="video" autoplay plasyinline muted loop preload="auto">
+            <source
+              src="https://www.dropbox.com/scl/fi/kom1k9lzy0cv5kuv5w7ax/3.mp4?rlkey=snrgr80eygchhg3fgcvu3rmcv&st=gendfp04&raw=1"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <video class="video" autoplay plasyinline muted loop preload="auto">
+            <source
+              src="https://www.dropbox.com/scl/fi/ftibg38yoorg7dwdp0fag/4.mp4?rlkey=khu7l0yqyxizj1ieko9p844y1&st=dvww8izo&raw=1"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+                <div class="small-text">lawyers4cyclists - cyclinglaw.com</div>
+            </div>
+            <div class="slide">
+                <img src="/images/l4c-white.svg" alt="Cycling Law Logo" class="logo" />
+                <div class="text">
+                    <b>ADVOCATING FOR</b>
+                    <br /><b> INJURED</b>
+                    <span style="color: #f7cc52"><b>CYCLISTS</b></span>
+                </div>
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                if (i === index) {
+                    slide.classList.add("active");
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 2000); // Change slide every 2 seconds
+    </script>
+</body>
+
+</html>
