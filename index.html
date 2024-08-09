@@ -69,6 +69,10 @@
             padding: 0 10px;
         }
         
+        #last-slide {
+            top: -10px;
+        }
+        
         .video {
             width: 100%;
             height: auto;
@@ -77,14 +81,44 @@
         
         .small-text {
             font-size: 10px;
-            margin-top: 5px;
             position: absolute;
-            bottom: 15px;
+            bottom: 0;
             width: 100%;
             text-align: center;
             font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
+            background-color: #f1f1f1;
+            /* Gray background color */
+            color: #000;
+            /* Black text color */
+            padding: 10px 0;
+            /* Adds padding to the top and bottom of the text */
+            box-sizing: border-box;
+            /* Ensures padding is included within the width */
+        }
+        
+        .cta-button {
+            font-size: 12px;
+            padding: 10px 20px;
+            background-color: #f7cc52;
+            color: #000;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: #e5b846;
+            transform: translateX(-50%) translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
@@ -97,10 +131,12 @@
                     <b>NO</b><i> TWO CYCLISTS</i> <br /><b>ARE</b>
                     <span style="color: #f7cc52"><b>THE SAME</b></span>
                 </div>
+                <button class="cta-button">Learn More</button>
+
                 <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
-                <video class="video" autoplay plasyinline muted loop preload="auto">
+                <video class="video" autoplay playsinline muted loop preload="auto">
             <source
               src="
               https://www.dropbox.com/scl/fi/kudsb84wabzlwomke4b7m/1.mp4?rlkey=ccz6odphpoacumdj6panuqg1b&st=01ymzeah&raw=1"
@@ -108,16 +144,21 @@
             />
             Your browser does not support the video tag.
           </video>
+                <button class="cta-button">Learn More</button>
+
                 <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
-                <video class="video" autoplay plasyinline muted loop preload="auto">
+                <video class="video" autoplay playsinline muted loop preload="auto">
             <source
               src="https://www.dropbox.com/scl/fi/mopry053p7fslftzsoduk/2.mp4?rlkey=7ztzxg2wyo2w0u522nz8tjh5c&st=evzk5yxn&raw=1"
               type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
+                <button class="cta-button">Learn More</button>
+                <!-- Small button added here -->
+
                 <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
@@ -128,10 +169,13 @@
                     <b> YOU</b>
                     <span style="color: #f7cc52"><b>LIKE YOU</b></span>
                 </div>
-                <div class="small-text">lawyers4cyclists - cyclinglaw.com</div>
+                <button class="cta-button">Learn More</button>
+                <!-- Small button added here -->
+
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
-                <video class="video" autoplay plasyinline muted loop preload="auto">
+                <video class="video" autoplay playsinline muted loop preload="auto">
             <source
               src="https://www.dropbox.com/scl/fi/kom1k9lzy0cv5kuv5w7ax/3.mp4?rlkey=snrgr80eygchhg3fgcvu3rmcv&st=gendfp04&raw=1"
               type="video/mp4"
@@ -141,22 +185,26 @@
                 <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
-                <video class="video" autoplay plasyinline muted loop preload="auto">
+                <video class="video" autoplay playsinline muted loop preload="auto">
             <source
               src="https://www.dropbox.com/scl/fi/ftibg38yoorg7dwdp0fag/4.mp4?rlkey=khu7l0yqyxizj1ieko9p844y1&st=dvww8izo&raw=1"
               type="video/mp4"
             />
             Your browser does not support the video tag.
           </video>
-                <div class="small-text">lawyers4cyclists - cyclinglaw.com</div>
+                <button class="cta-button">Learn More</button>
+
+                <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
             <div class="slide">
-                <img src="l4c-white.svg" alt="Cycling Law Logo" class="logo" />
+                <img src="/images/l4c-white.svg" alt="Cycling Law Logo" class="logo" />
                 <div class="text">
                     <b>ADVOCATING FOR</b>
                     <br /><b> INJURED</b>
                     <span style="color: #f7cc52"><b>CYCLISTS</b></span>
                 </div>
+                <button class="cta-button">Learn More</button>
+
                 <div class="small-text">lawyers 4 cyclists - cyclinglaw.com</div>
             </div>
         </a>
